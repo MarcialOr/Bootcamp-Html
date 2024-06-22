@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <nav class="navbar">
+                <section class="logo">
+                    <h2>M<span>GO</span>A</h2>
+                </section>
+                <ul class="menu">
+                       <li><a>Inicio</a></li>
+                       <li><a>Quien soy?</a></li>
+                       <li><a>Proyectos</a></li>
+                       <li><a>Contactos</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="info-content">
+                <h1>soy Marcial Ordoñez</h1>
+                <p>Lorem ipsum dolor, sit amet 
+                    consectetur adipisicing elit. 
+                    Omnis, voluptatibus!</p>
+                <button class="btn-download-cv">Descargar CV</button>
+            </section>
+            <img src="./images/2024-06-06 18_17_11-Window.png" alt="">
+        </main>
+
+        <section class="portfolio-container">
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="./images/correctaYuyo.png" alt="Yuyo Hakusho">
+                </div>
+                <div class="card-title">
+                    <h4>Hola Mundo</h4>
+                </div>
+                <div class="card-links">
+                    <a href="#">Github</a>
+                    <a href="#">Demo</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="./images/correctaYuyo.png" alt="Yuyo Hakusho">
+                </div>
+                <div class="card-title">
+                    <h4>Hola Mundo</h4>
+                </div>
+                <div class="card-links">
+                    <a href="#">Github</a>
+                    <a href="#">Demo</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img">
+                    <img src="./images/correctaYuyo.png" alt="Yuyo Hakusho">
+                </div>
+                <div class="card-title">
+                    <h4>Hola Mundo</h4>
+                </div>
+                <div class="card-links">
+                    <a href="#">Github</a>
+                    <a href="#">Demo</a>
+                </div>
+            </article>
+
+            
+
+        </section>
+
+
+
+        <div class="contact-section">
+            <section>
+                <h1>Contact Us</h1>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea><br><br>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+            
+    </div>
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+            const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert('Your message has been sent successfully!');
+                }, (err) => {
+                    alert('Failed to send the message. Please try again.');
+                    console.log('Failed to send email. Error:', err);
+                });
+        });
+    </script>
+</body>
+</html>

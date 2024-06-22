@@ -1,0 +1,28 @@
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.banner{
+    background-image: url('https://res.cloudinary.com/dmddi5ncx/image/upload/v1710868812/practicas/site_montain/shutterstock_116403520_e3nbz8.jpg');
+    height: 400px;
+    /** cover **/
+    background-size: cover;
+    background-position: center -100px;
+}
+/** media query
+    max-width: maximo ancho
+    min-width
+*/
+@media(max-width: 576px){
+    .banner{
+        height: 150px;
+        background-position: center -50px;
+    }
+}
+
+.carousel-caption-bg {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    padding: 10px;
+    border-radius: 5px;
+}

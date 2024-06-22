@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(23, 2, 82);
+    font-family: 'Schoolbell', sans-serif;
+    /*Me ayudo desaparecer el x scroll*/
+    overflow-x: hidden;
+}
+
+.container{
+    width: 100vw;
+}
+
+/*--------------------------HEADER-----------*/
+
+.header{
+    color:#fff;
+}
+
+.header .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+/*em es para los textos*/
+.header .navbar .logo{
+    font-size: 1.5em;
+}
+
+.header .navbar .logo h2 span{
+    color: chocolate;
+}
+
+.header .navbar .menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .navbar .menu li{
+    list-style: none;
+    margin-top: 0.7rem;
+}
+
+.header .navbar .menu li a{
+    text-decoration: none;
+    padding: 1.2rem;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.header .navbar .menu li a:hover{
+    font-size: 1.1rem;
+    text-shadow: 3px 2px chocolate;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/*------------------------BIO------------------*/
+
+.main-content{
+    color: #fff;
+    margin:0 auto;
+    padding: 0 90px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main-content .info-content{
+    text-shadow: 3px 3px black;
+}
+
+.main-content .info-content h1{
+    font-size: 3rem;
+}
+
+.main-content .info-content p{
+    font-size: 1.5rem;
+}
+
+.main-content .info-content .btn-download-cv{
+    padding: 10px 20px;
+    background-color: rgb(5, 106, 236);
+    font-family: 'Schoolbell', sans-serif;
+    font-size: 2rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px rgba(255,255,255,15);
+    transition: 0.5s;
+}
+
+.main-content .info-content .btn-download-cv:hover{
+    background-color: chocolate;
+    transition: 0.5s;
+}
+
+.main-content img{
+    width: 300px;
+    transition: 1s;
+}
+
+.main-content img:hover{
+    border-radius: 500px;
+    transition: 1s;
+}
+
+/*-----------------Portfolio-------------------------*/
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjust this value to make the image smaller */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title {
+    padding: 16px;
+}
+
+.card-title h4 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-links {
+    padding: 16px;
+}
+
+.card-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-links a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/*-------------------CONTACT--------------------*/
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    align-items: center;
+}
+
+h1 {
+    color: #1e90ff;
+    text-align: center;
+}
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e90ff;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1e90ff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+button {
+    background-color: #1e90ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+button:hover {
+    background-color: #1c86ee;
+}
